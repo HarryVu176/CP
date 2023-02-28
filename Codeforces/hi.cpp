@@ -26,7 +26,7 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
+    cout << "Hello World!" << endl;    
 }
 
 int main() {

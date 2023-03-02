@@ -1,11 +1,38 @@
 #!/usr/bin/env python
 import os
+import re
 import sys
 from io import BytesIO, IOBase
 
+def inp(): return int(input())
 
+def inlt(): return list(map(int, input().split()))
+
+def insr():
+    s = input()
+    return list(s[:len(s) - 1])
+
+def insr2():
+    s = input()
+    return list(s[:len(s)])
+
+def invr(): return map(int, input().split())
+
+"""
+☆(ﾉ^ω^)ﾉ‥‥‥…━━━━〇　(^Ο^)
+(。・ω・)＝《《≠≠≠≠≠≠≠≠〇
+PLS WORK
+"""
+
+# def main():
+#     tc = inp()
+#     for _ in range(tc):
+#         pass
+        
 def main():
-    pass
+    uin = input()
+    uin = re.sub("RBL|RLB|LBR|LRB|BLR|BRL", "C", uin)
+    print(uin.translate(uin.maketrans('RBL', 'SKH')))
 
 
 # region fastio

@@ -26,14 +26,29 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    cout << "Hello World!" << endl;    
+    
+    ll strlength;
+    string input;
+    cin >> strlength >> input;
+
+    unordered_set<string> set;
+
+    for (int i = 0; i < strlength - 1; i++) {
+        string inputtemp = input;
+        string out = inputtemp.erase(i, 2);
+        set.insert(out);
+    }
+
+    cout << set.size() << endl;
+    cout << set << endl;
+
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
